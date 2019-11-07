@@ -18,7 +18,7 @@ double **B;
 void Block_IKJ(int n){	
 for (i=0;i<n;i=i+2){                                                 	
    for (k=0;k<n;k=k+2){
-     for (j=0;j<n;j=j+2){
+     for (j=0;j<n;j++){
 		 AB[i][j] = AB[i][j] + A[i][k]*B[k][j];
 		 AB[i+1][j] = AB[i+1][j] + A[i+1][k]*B[k][j];
 		 AB[i][j] = AB[i][j] + A[i][k+1]*B[k+1][j];
@@ -61,7 +61,7 @@ for (j=0;j<n;j=j+2){
 void Block_JIK(int n){	
 for (j=0;j<n;j=j+2){                                                 	
    for (i=0;i<n;i=i+2){
-     for (k=0;k<n;k=k+2){	 
+     for (k=0;k<n;k++){	 
 	     AB[i][j] = AB[i][j] + A[i][k]*B[k][j];
 		 AB[i][j+1] = AB[i][j+1] + A[i][k]*B[k][j+1];
 		 AB[i+1][j] = AB[i+1][j] + A[i+1][k]*B[k][j];
